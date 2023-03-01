@@ -9,6 +9,18 @@ const os = require("os");
 
 console.log("Admin console ready for connection on route /app");
 
+function socketIORefute(return_value) {
+    let x = 0;
+    console.error('sio store refuted')
+
+    if (socket.visitors) {
+        return 0
+    } else {
+        socket.tries = 1
+        return 0
+    }
+}
+
 sio.on("connection", function(socket) {
   sock = socket;
   socket.tries = 0;
